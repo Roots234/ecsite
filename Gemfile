@@ -33,6 +33,11 @@ gem 'devise'
 gem 'hamlit-rails'
 gem 'html2haml'
 gem 'active_decorator'
+gem 'materialize-sass', '~> 1.0.0'
+gem 'simple_form'
+gem 'enumerize'
+gem 'jquery-rails'
+gem 'carrierwave', '~> 1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
