@@ -1,0 +1,10 @@
+= image_tag @product.image.url || "bottle2.jpg"
+
+%p
+  = @product.name
+%p
+  = @product.description
+%p
+  = @product.display_price
+.btn.btn-large
+  買い物かごに入れる

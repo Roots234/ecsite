@@ -12,6 +12,8 @@
 #
 
 class Product < ApplicationRecord
+    include Hashid::Rails
+    
     validates :name, presence: true
     validates :description, presence: true
     validates :price, presence: true
