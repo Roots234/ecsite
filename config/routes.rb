@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
-  get 'products/index'
+  get 'baskets/show'
 
   devise_for :users
   
   root 'products#index'
+  resource :basket, only: %i(show)
+  resources :products, only: %i(new show create) do
+    scope module: :products do
+      resources :add_to_baskets, only: %i(create)
+      resources :delete_in_baskets, only: %i(create)
+    end
+  end
   
-  resources :products, only: %i(new create show)
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
 end

@@ -7,6 +7,7 @@
 #  description :text             not null
 #  price       :integer          not null
 #  unit        :string           default("yen"), not null
+#  image       :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
