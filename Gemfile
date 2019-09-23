@@ -39,6 +39,7 @@ gem 'enumerize'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'hashid-rails', '~> 1.0'
+gem 'stripe'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -50,6 +51,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :development do
